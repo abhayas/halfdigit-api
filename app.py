@@ -13,9 +13,12 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-titanic_artifact = joblib.load("model/Titanic_model.pkl")
-titanic_model = titanic_artifact["model"]
-titanic_features = titanic_artifact["features"]
+titanic_model = joblib.load("model/Titanic_model.pkl")
+
+TITANIC_FEATURES = [
+    "pclass", "age", "sibsp", "parch", "adult_male", "alone", "male"
+]
+
 
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
