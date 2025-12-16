@@ -13,6 +13,10 @@ import json
 app = Flask(__name__)
 CORS(app)
 
+titanic_artifact = joblib.load("model/Titanic_model.pkl")
+titanic_model = titanic_artifact["model"]
+titanic_features = titanic_artifact["features"]
+
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
@@ -26,6 +30,50 @@ def health():
 
 def get_conn():
     return psycopg2.connect(DATABASE_URL,sslmode="require")
+
+
+@app.route("/predict-titanic", methods=["POST"])
+def predict_titanic():
+    data = request.get_json()
+
+    # Build input vector in correct order
+    X = np.array([[
+        int(data["pclass"]),
+        float(data["age"]),
+        int(data["sibsp"]),
+        int(data["parch"]),
+        int(data["adult_male"]),
+        int(data["alone"]),
+        int(data["male"])
+    ]])
+
+    prediction = titanic_model.predict(X)[0]
+    probability = titanic_model.predict_proba(X).max()
+
+    # Log to DB
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(
+        """
+        INSERT INTO visits (page_path, model_name, prediction, probability, payload)
+        VALUES (%s,%s,%s,%s,%s)
+        """,
+        (
+            "/titanic-demo",
+            "titanic-rf",
+            int(prediction),
+            float(probability),
+            json.dumps(data)
+        )
+    )
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    return jsonify({
+        "survived": bool(prediction),
+        "probability": round(float(probability), 2)
+    })
 
 
 
