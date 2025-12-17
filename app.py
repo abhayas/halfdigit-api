@@ -109,6 +109,39 @@ def predict():
 
 
 
+@app.route("/log-visit", methods=["POST"])
+def log_visit():
+    data = request.get_json()
+
+    page_path = data.get("page_path", "/")
+    referrer = data.get("referrer", "")
+    user_agent = data.get("user_agent", "")
+
+    conn = get_conn()
+    cur = conn.cursor()
+
+    cur.execute(
+        """
+        INSERT INTO visits (page_path, model_name, prediction, probability, payload)
+        VALUES (%s, %s, %s, %s, %s)
+        """,
+        (
+            page_path,
+            "page-visit",
+            None,
+            None,
+            json.dumps({
+                "referrer": referrer,
+                "user_agent": user_agent
+            })
+        )
+    )
+
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    return jsonify({"status": "logged"})
 
 
 
