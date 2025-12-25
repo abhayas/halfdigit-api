@@ -7,6 +7,9 @@ import os
 from dotenv import load_dotenv
 import psycopg2
 import json
+import resend
+
+
 
 
 
@@ -22,6 +25,10 @@ TITANIC_FEATURES = [
 
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
+RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
+
+
+
 
 @app.route("/")
 def home():
@@ -144,6 +151,85 @@ def log_visit():
     return jsonify({"status": "logged"})
 
 
+
+
+@app.route("/contact", methods=["POST"])
+def contact():
+    data = request.get_json()
+
+    name = data["name"]
+    email = data["email"]
+    message = data["message"]
+    source_page = data.get("source_page", "")
+
+    # Save to DB
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(
+        """
+        INSERT INTO contact_messages (name, email, message, source_page)
+        VALUES (%s, %s, %s, %s)
+        """,
+        (name, email, message, source_page)
+    )
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    # Send email (Resend / SMTP)
+    send_email(name, email, message, source_page)
+    send_user_copy(name, email, message)
+
+    return jsonify({"status": "success"})
+
+def send_email(name, email, message, source_page):
+    resend.Emails.send({ 
+
+        "from" : "HalfDigit Contact Form <no-reply@halfdigit.com>",
+        "to" : [ "sahuabhayaa333@gmail.com", "abhayas@zohomail.in" ],
+        "subject" : f"new contact message from {name}",
+        "html" : f"""
+                    <p><strong>Name :</strong>{name}</p>
+                    <p><strong>Email :</strong>{email}</p>
+                    <p><strong>Message :</strong>{message}</p>
+                    <p><strong>Source Page :</strong>{source_page}</p>
+                    <p>{message}</p>      
+
+                """
+
+        
+       })
+    
+
+
+
+def send_user_copy(name, email, message):
+    resend.Emails.send({
+        "from": "Abhaya Prasad Sahu <no-reply@halfdigit.com>",
+        "to": [email],
+        "subject": "Thanks for reaching out – HalfDigit.com",
+        "html": f"""
+            <p>Hi {name},</p>
+
+            <p>Thanks for reaching out via my portfolio website <a href="https://halfdigit.com">halfdigit.com</a>.</p>
+
+            <p>I have received your message and will personally get back to you soon.</p>
+
+            <hr>
+
+            <p><b>Your message:</b></p>
+            <blockquote>{message}</blockquote>
+
+            <p>
+                Best regards,<br>
+                <b>Abhaya Prasad Sahu</b><br>
+                <span style="color:#555;">
+                    AI/ML | Data Science | SharePoint | <br>
+                    <a href="https://halfdigit.com">halfdigit.com</a>
+                </span>
+            </p>
+        """
+    })
 
 
 
