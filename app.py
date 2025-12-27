@@ -128,13 +128,15 @@ def send_user_copy(name, email, message):
 
 
 
-def transcribe_with_hf(audio_bytes):
+def transcribe_with_hf(audio_bytes, content_type="audio/wav"):
+
+    print(content_type)
     
     api_url = "https://router.huggingface.co/hf-inference/models/openai/whisper-large-v3-turbo"
     
     headers = {
         "Authorization": f"Bearer {HF_TOKEN}",
-        "Content-Type": "audio/wav"
+        "Content-Type": content_type
     }
 
     print(f"Attempting to send {len(audio_bytes)} bytes to {api_url}...")
@@ -143,7 +145,7 @@ def transcribe_with_hf(audio_bytes):
         api_url,
         headers=headers,
         data=audio_bytes,
-        timeout=30
+        timeout=300
     )
 
     if response.status_code != 200:
@@ -162,9 +164,20 @@ def speech_to_text():
 
     audio_file = request.files["audio"]
     audio_bytes = audio_file.read()
+    contenttype= audio_file.content_type
+    if not contenttype or contenttype == 'application/octet-stream':
+       
+          
+        if audio_file.filename.lower().endswith(".mp3"):
+            contenttype = "audio/mpeg"
+        elif audio_file.filename.lower().endswith(".wav"):
+            contenttype = "audio/wav"
+        else:
+            contenttype = "audio/wav"
+
 
     try:
-        transcript = transcribe_with_hf(audio_bytes)
+        transcript = transcribe_with_hf(audio_bytes,contenttype)
         return jsonify({"transcript": transcript})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
