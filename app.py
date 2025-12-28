@@ -145,7 +145,7 @@ def transcribe_with_hf(audio_bytes, content_type="audio/wav"):
         api_url,
         headers=headers,
         data=audio_bytes,
-        timeout=300
+        timeout=100
     )
 
     if response.status_code != 200:
