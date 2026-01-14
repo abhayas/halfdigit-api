@@ -1,0 +1,63 @@
+01: Passenger Survival Engine
+Scikit-learn
+Flask
+REST API
+● LIVE
+Production-grade classification system. Features serverless cold-start handling, request logging, and real-time probability inference.
+
+Initialize Module
+Notebook Specs
+↗
+02: Audio Extraction Pipeline
+OpenAI Whisper
+Hugging Face
+Flask
+● LIVE
+Automated speech-to-text transcription pipeline using the Whisper Large-v3 model via Hugging Face Inference API. Handles WAV/MP3 audio ingestion.
+
+Initialize Module
+Frontend Code
+↗
+Backend API
+↗
+03: Deep Learning Risk Assessor
+TensorFlow/Keras
+Python
+Microservice
+◌ BUILDING
+Neural Network for financial risk assessment. Currently optimizing model weights for containerized deployment on Render free tier.
+
+Coming Soon...
+Model Specs
+↗
+04: Enterprise Doc Chat (RAG)
+OpenAI
+Vector DB
+LangChain
+◌ BUILDING
+Retrieval-Augmented Generation system allowing secure Q&A against uploaded PDF documentation. Simulating enterprise search.
+
+Coming Soon...
+No Specs
+
+Module 01: Titanic Survival Engine
+Status: Active | Endpoint: /predict-titanic
+
+API CONNECTION: SECURE
+About this demo
+This interactive demo shows a machine learning model that predicts whether a passenger on the RMS Titanic would have survived based on a few simple details. It is an educational tool — not a perfect prediction — that helps illustrate how models use features like age, sex, and travel class to estimate outcomes.
+
+Inputs: Passenger class (1 = highest, 3 = lowest), age, sex, family count, and simple flags.
+Output: A prediction ("Passenger Survived" or "Did Not Survive") plus a probability showing the model's confidence.
+How it works: Your inputs are sent to a backend model which returns the prediction in real time. Change the input paraments in the below form and and click on "Run Inference Engine" to see the prediction
+
+Module 02: Audio Extraction Pipeline
+Status: Active | Endpoint: /speech-to-text
+
+API CONNECTION: SECURE
+About this demo
+This module demonstrates an automated pipeline for converting unstructured audio data into structured text. It leverages the OpenAI Whisper Large-v3 model via Hugging Face Inference API to transcribe speech with high accuracy.
+
+Inputs: Raw audio files (.wav or .mp3).
+Output: Full text transcription.
+Tech Stack: Next.js Frontend → Python Flask API → Hugging Face Inference Cluster.

@@ -8,6 +8,22 @@ import psycopg2
 import json
 import resend
 import requests
+from rag import rag_chain, retriever
+
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_community.vectorstores import FAISS
+# OLD (Broken in v0.3)
+# from langchain.chains import create_retrieval_chain
+# from langchain.chains.combine_documents import create_stuff_documents_chain
+
+# NEW (Correct Explicit Paths)
+
+
+from langchain_core.prompts import ChatPromptTemplate
+
+
+
 
 # Load environment variables
 load_dotenv()
@@ -181,6 +197,31 @@ def speech_to_text():
         return jsonify({"transcript": transcript})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+
+
+@app.route('/chat-about-me', methods=['POST'])
+def chat_about_me():
+    # ... existing setup ...
+    data = request.json
+    user_query = data.get('query')
+
+    # --- DEBUGGING START ---
+    # This will print found documents to your VS Code terminal
+    print(f"\nUser asked: {user_query}")
+    docs = retriever.invoke(user_query)
+    print(f"Retrieved {len(docs)} relevant chunks.")
+    for i, doc in enumerate(docs):
+        print(f"--- Chunk {i+1} ---")
+        print(doc.page_content[:200]) # Print first 200 chars of each chunk
+        print("----------------")
+    # --- DEBUGGING END ---
+
+    response = rag_chain.invoke(user_query)
+    return jsonify({"answer": response})
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)

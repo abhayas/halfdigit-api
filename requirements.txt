@@ -11,3 +11,9 @@ seaborn
 matplotlib
 imbalanced-learn
 resend
+langchain
+langchain-community
+langchain-core
+langchain-openai
+faiss-cpu
+langchain_text_splitters
