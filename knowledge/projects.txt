@@ -61,3 +61,34 @@ This module demonstrates an automated pipeline for converting unstructured audio
 Inputs: Raw audio files (.wav or .mp3).
 Output: Full text transcription.
 Tech Stack: Next.js Frontend → Python Flask API → Hugging Face Inference Cluster.
+
+Project Name: Portfolio AI Assistant (RAG Chatbot)
+Role: AI Engineer & Full Stack Developer
+Technologies: Python, Flask, LangChain, OpenAI GPT-4o, FAISS, React.js, Tailwind CSS, Hugging Face (Whisper).
+
+Description:
+Designed and developed a custom conversational AI agent embedded into the personal portfolio website (HalfDigit.com). The bot serves as an interactive resume, capable of answering specific questions about Abhaya's professional background, technical skills, and project experience in real-time.
+
+Technical Architecture:
+1. Retrieval-Augmented Generation (RAG):
+   - Implemented a RAG pipeline using LangChain to ground LLM responses in factual data.
+   - The knowledge base consists of structured text files (Resume, Project Details, Profile) indexed for semantic search.
+
+2. Backend & AI Logic:
+   - Built a Python Flask API to handle chat requests.
+   - Utilized OpenAI's 'gpt-4o-mini' model for natural language generation and 'text-embedding-3-small' for creating high-dimensional vector embeddings.
+   - Integrated FAISS (Facebook AI Similarity Search) as the vector database for efficient, low-latency document retrieval.
+   - Implemented a 'Manual LCEL' (LangChain Expression Language) chain to ensure robust architecture independent of library version changes.
+
+3. Frontend & UI:
+   - Developed a responsive, floating chat widget using React.js and Tailwind CSS.
+   - Features include auto-scrolling, a seamless toggle animation, and a "typing" indicator state.
+   - Connected the frontend to the backend via RESTful API endpoints.
+
+4. Audio Features:
+   - Integrated Hugging Face's Inference API (Whisper model) to enable Speech-to-Text capabilities, allowing users to ask questions via voice.
+
+Key Achievements:
+- Successfully reduced hallucination by strictly constraining the AI to the retrieved context.
+- Optimized cost and latency by using the 'mini' model variant and local vector storage.
+- Created a "Meta-aware" system where the bot understands its own architecture and can explain how it was built.
