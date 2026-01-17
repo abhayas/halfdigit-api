@@ -68,7 +68,7 @@ CERTIFICATIONS:
   - Validated foundational knowledge of Machine Learning, Computer Vision, and Natural Language Processing (NLP) workloads within the Azure ecosystem.
 
 - Microsoft Certified: Power BI Data Analyst Associate (PL-300)
-  Link: https://learn.microsoft.com/api/credentials/share/en-gb/AbhayaPrasadSahu-3680/3AE2D27B78D2F962?sharingId
+  Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/728C0783EF562446?sharingId=55C01124773C65B1
   - Demonstrated expertise in data modeling, advanced DAX calculations, and transforming raw data into actionable insights using Power Query and interactive dashboards.
 
 - Microsoft Certified: Power Platform App Maker Associate (PL-100)

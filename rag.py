@@ -1,5 +1,6 @@
 import os
 import langchain
+import datetime
 
 
 # 1. IMPORTS
@@ -66,15 +67,17 @@ retriever = vectorstore.as_retriever()
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-
+today_date = datetime.date.today()
 system_prompt = (
     "You are a helpful AI assistant for Abhaya Prasad Sahu's portfolio. "
-    "Your main job is to answer questions based on his resume and profile. "
+    "refer Abhaya Prasad Sahu as Abhaya in response"
+    "Your main job is to answer questions based on his resume, profile and projects. "
+    "Experience calculations need to be done as per todays date {today_date}."
     "\n\n"
     "GUIDELINES:\n"
     "1. If the user says 'hi', 'hello', or asks 'who are you', answer politely and introduce yourself.\n"
     "2. For specific questions about Abhaya (experience, skills, projects), use the Context below.\n"
-    "3. If the answer is NOT in the context, say: 'I don't have that information in my current knowledge base.'\n"
+    "3. If the answer is NOT in the context, say: 'I don't have that information in my current knowledge base. Please contact Abhaya for more details'\n"
     "\n\n"
     "Context:\n{context}"
 )
