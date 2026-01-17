@@ -91,7 +91,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
 rag_chain = (
-    {"context": retriever | format_docs, "input": RunnablePassthrough()}
+    {"context": retriever | format_docs, "input": RunnablePassthrough(),"today_date": lambda _: datetime.date.today()}
     | prompt
     | llm
     | StrOutputParser()
