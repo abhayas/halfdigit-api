@@ -10,41 +10,44 @@ import resend
 import requests
 from rag import rag_chain, retriever
 
-from langchain_community.document_loaders import PyPDFLoader
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_community.vectorstores import FAISS
-# OLD (Broken in v0.3)
-# from langchain.chains import create_retrieval_chain
-# from langchain.chains.combine_documents import create_stuff_documents_chain
-
-# NEW (Correct Explicit Paths)
-
-
-from langchain_core.prompts import ChatPromptTemplate
-
-
-
-
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+
+# --- 1. CORS CONFIGURATION (Fixes the Blocked Error) ---
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://www.halfdigit.com",
+            "https://halfdigit.com",
+            "http://localhost:3000"
+        ]
+    }
+})
 
 # --- Configuration ---
 DATABASE_URL = os.environ.get("DATABASE_URL")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
 HF_TOKEN = os.environ.get("HF_TOKEN")
-titanic_model = joblib.load("model/Titanic_model.pkl")
 
+# Load Models
+try:
+    titanic_model = joblib.load("model/Titanic_model.pkl")
+except Exception as e:
+    print(f"Warning: Could not load Titanic model: {e}")
+    titanic_model = None
 
 # --- Database Connection ---
 def get_conn():
     return psycopg2.connect(DATABASE_URL, sslmode="require")
 
-
+# --- TITANIC PREDICTION ---
 @app.route("/predict-titanic", methods=["POST"])
 def predict_titanic():
+    if not titanic_model:
+        return jsonify({"error": "Model not loaded"}), 500
+
     data = request.get_json()
     
     X = np.array([[
@@ -60,36 +63,32 @@ def predict_titanic():
     prediction = titanic_model.predict(X)[0]
     probability = titanic_model.predict_proba(X).max()
 
-    
-    conn = get_conn()
-    cur = conn.cursor()
-    cur.execute(
-        """
-        INSERT INTO visits (page_path, model_name, prediction, probability, payload)
-        VALUES (%s,%s,%s,%s,%s)
-        """,
-        ("/titanic-demo", 
-         "titanic-rf", 
-         int(prediction), 
-         float(probability), 
-         json.dumps(data))
-    )
-    conn.commit()
-    cur.close()
-    conn.close()
-    
+    try:
+        conn = get_conn()
+        cur = conn.cursor()
+        cur.execute(
+            """
+            INSERT INTO visits (page_path, model_name, prediction, probability, payload)
+            VALUES (%s,%s,%s,%s,%s)
+            """,
+            ("/titanic-demo", 
+             "titanic-rf", 
+             int(prediction), 
+             float(probability), 
+             json.dumps(data))
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+    except Exception as e:
+        print(f"Logging Error: {e}")
 
     return jsonify({
         "survived": bool(prediction),
         "probability": round(float(probability), 2)
     })
 
-
-
-
-
-
-# --- Contact Form ---
+# --- CONTACT FORM ---
 @app.route("/contact", methods=["POST"])
 def contact():
     data = request.get_json()
@@ -127,7 +126,7 @@ def send_email(name, email, message, source_page):
         resend.Emails.send({
             "from": "HalfDigit Contact Form <no-reply@halfdigit.com>",
             "to": ["sahuabhayaa333@gmail.com", "abhayas@zohomail.in"],
-            "subject": f"new contact message from {name}",
+            "subject": f"New contact message from {name}",
             "html": f"<p><strong>Name:</strong>{name}</p><p><strong>Email:</strong>{email}</p><p><strong>Message:</strong>{message}</p><p><strong>Source:</strong>{source_page}</p>"
         })
     except Exception as e:
@@ -146,36 +145,21 @@ def send_user_copy(name, email, message):
     except Exception as e:
         print(f"User Copy Email Error: {e}")
 
-
-
+# --- SPEECH TO TEXT ---
 def transcribe_with_hf(audio_bytes, content_type="audio/wav"):
-
-    print(content_type)
-    
     api_url = "https://router.huggingface.co/hf-inference/models/openai/whisper-large-v3-turbo"
-    
     headers = {
         "Authorization": f"Bearer {HF_TOKEN}",
         "Content-Type": content_type
     }
-
-    print(f"Attempting to send {len(audio_bytes)} bytes to {api_url}...")
-
-    response = requests.post(
-        api_url,
-        headers=headers,
-        data=audio_bytes,
-        timeout=100
-    )
-
+    
+    response = requests.post(api_url, headers=headers, data=audio_bytes, timeout=100)
+    
     if response.status_code != 200:
-        print(f"HF Error {response.status_code}: {response.text}")
         raise Exception(f"HF Error: {response.text}")
 
     result = response.json()
-    
     return result.get("text", str(result))
-
 
 @app.route("/speech-to-text", methods=["POST"])
 def speech_to_text():
@@ -184,90 +168,55 @@ def speech_to_text():
 
     audio_file = request.files["audio"]
     audio_bytes = audio_file.read()
-    contenttype= audio_file.content_type
+    contenttype = audio_file.content_type
+
     if not contenttype or contenttype == 'application/octet-stream':
-       
-          
         if audio_file.filename.lower().endswith(".mp3"):
             contenttype = "audio/mpeg"
-        elif audio_file.filename.lower().endswith(".wav"):
-            contenttype = "audio/wav"
         else:
             contenttype = "audio/wav"
 
-
     try:
-        transcript = transcribe_with_hf(audio_bytes,contenttype)
+        transcript = transcribe_with_hf(audio_bytes, contenttype)
         return jsonify({"transcript": transcript})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
 
-
+# --- RAG CHATBOT (Consolidated) ---
 @app.route('/chat-about-me', methods=['POST'])
 def chat_about_me():
-    # ... existing setup ...
     data = request.json
-    user_query = data.get('query')
+    # Support both 'query' (your old frontend) and 'message' (new convention)
+    user_query = data.get('query') or data.get('message')
+    source = data.get('source', 'direct') # Track if they came from LinkedIn
+    
+    # 1. Generate Response via RAG
+    try:
+        response = rag_chain.invoke(user_query)
+    except Exception as e:
+        print(f"RAG Error: {e}")
+        return jsonify({"error": "AI is thinking too hard..."}), 500
 
-    # --- DEBUGGING START ---
-    # This will print found documents to your VS Code terminal
-    print(f"\nUser asked: {user_query}")
-    docs = retriever.invoke(user_query)
-    print(f"Retrieved {len(docs)} relevant chunks.")
-    for i, doc in enumerate(docs):
-        print(f"--- Chunk {i+1} ---")
-        print(doc.page_content[:200]) # Print first 200 chars of each chunk
-        print("----------------")
-    # --- DEBUGGING END ---
-
-    response = rag_chain.invoke(user_query)
-    return jsonify({"answer": response})
-
-from flask import Flask, request, jsonify
-import psycopg2  # or sqlite3
-from datetime import datetime
-
-app = Flask(__name__)
-
-# Database connection function (simplified)
-def get_db_connection():
-    return psycopg2.connect(
-        host="your-db-host",
-        database="your-db-name",
-        user="your-db-user",
-        password="your-db-password"
-    )
-
-
-
-@app.route('/chat', methods=['POST'])
-def chat():
-    data = request.json
-    user_question = data.get('message')
-    session_id = data.get('session_id', 'anonymous') # generated by frontend
-
-    # 1. Generate your AI response (Your existing RAG logic)
-    # response_text = your_rag_function(user_question)
-    response_text = "This is a dummy AI response for " + user_question
-
-    # 2. LOGGING: Save to Database
+    # 2. Log to Database
     try:
         conn = get_conn()
         cur = conn.cursor()
+        # Ensure your table has a 'source' column, or remove it from query if not
         cur.execute(
-            "INSERT INTO chat_logs (user_session_id, user_question, ai_response) VALUES (%s, %s, %s)",
-            (session_id, user_question, response_text)
+            """
+            INSERT INTO chat_logs (user_question, ai_response, source) 
+            VALUES (%s, %s, %s)
+            """,
+            (user_query, response, source)
         )
         conn.commit()
         cur.close()
         conn.close()
     except Exception as e:
-        print(f"Logging failed: {e}") # Don't crash the chat if logging fails
+        print(f"Chat Logging Failed: {e}")
+        # We do NOT return an error here, so the user still gets their answer
 
-    # 3. Return response to user
-    return jsonify({"response": response_text})
-
+    return jsonify({"answer": response})
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
