@@ -39,9 +39,9 @@ docs = []
 for loader in loaders:
     try:
         docs.extend(loader.load())
-        print(f"✅ Loaded: {loader.file_path}")
+        print(f"Loaded: {loader.file_path}")
     except Exception as e:
-        print(f"❌ WARNING: Could not load {loader.file_path}. Error: {e}")
+        print(f"WARNING: Could not load {loader.file_path}. Error: {e}")
 
 if not docs:
     print("CRITICAL ERROR: No documents loaded. Exiting.")
@@ -62,13 +62,11 @@ embedding = OpenAIEmbeddings(model="text-embedding-3-small")
 vectorstore = FAISS.from_documents(chunks, embedding)
 retriever = vectorstore.as_retriever()
 
-# --- 4. BUILD THE CHAIN (Manual LCEL) ---
 
-# Helper function to format retrieved docs into a string
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-# System Prompt
+
 system_prompt = (
     "You are a helpful AI assistant for Abhaya Prasad Sahu's portfolio. "
     "Your main job is to answer questions based on his resume and profile. "
@@ -88,10 +86,7 @@ prompt = ChatPromptTemplate.from_messages([
 
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
-# The RAG Chain logic:
-# 1. 'context' = Retrieve docs -> Format them
-# 2. 'input' = User query
-# 3. Pass both to Prompt -> LLM -> Parse Output
+
 rag_chain = (
     {"context": retriever | format_docs, "input": RunnablePassthrough()}
     | prompt
@@ -99,9 +94,6 @@ rag_chain = (
     | StrOutputParser()
 )
 
-# --- 5. INTERACTIVE LOOP ---
-print("\n🤖 Bot Ready! Ask questions about Abhaya (Type 'exit' to quit)")
-print("-------------------------------------------------------------")
 
 if __name__ == "__main__":
     while True:

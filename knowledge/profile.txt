@@ -1,31 +1,22 @@
-ABHAYA PRASAD SAHU
-📞 +919768828350 | ✉️ sahuabhayaa333@gmail.com | 🌐 LinkedIn | 🖥️ GitHub | 🌐 halfdigit.com (Portfolio)________________________________________
-PROFESSIONAL SUMMARY
-Results-oriented AI Engineer & Data Scientist with over 17 years of experience in IT, transforming complex business requirements into scalable data solutions. Expert in bridging the gap between enterprise data systems and modern AI, leveraging Python, Machine Learning, and Power BI. Creator of halfdigit.com, a live full-stack AI portfolio showcasing end-to-end model deployment. Proven track record at Accenture in delivering high-impact automation and analytics dashboards. ________________________________________ TECHNICAL SKILLS
-	AI & Machine Learning: Python, Scikit-learn, NLP, Random Forest, Regression, Clustering, Generative AI, Neural Networks. 
-	Data Engineering & Analytics: SQL, Pandas, NumPy, Power BI (DAX), Azure AI, Matplotlib, Seaborn.
-	Web & Deployment: React.js, Next.js, JavaScript, Flask/Fast API, Git, GitHub Copilot.
-	Enterprise Tools: SharePoint Framework (SPFx), Power Automate, Power Platform, Salesforce.
-________________________________________Certifications
-Microsoft Certified : AI Fundamentals (AI-900), Power BI Data Analyst (PL-300), Power Platform Fundamentals (PL-900),  Power Platform App Maker (PL-100), Data Science and Machine Learning, SQL Bootcamp, Python Bootcamp from Udemy and GitHub Copilot certification  from GitHub
-________________________________________
-KEY PROJECTS & PORTFOLIO
-Founder & Developer | halfdigit.com (Personal Portfolio Project)
-	Full-Stack AI Deployment: Designed and deployed a React-based frontend and Python backend to host interactive Machine Learning models live on the web.
-	Models with Live demo: Loan Approval Predictor | Spam Classifier | Titanic Survival (visit halfdigit.com for the actual demo experience. 
-	Data Science projects: Implemented various solutions in my Data Science GitHub Repository (e.g. Loan Approval Prediction, Titanic Survival Prediction, Spam/Ham Message Classifier… etc)
-	Led multiple automation and data-driven initiatives in SharePoint & Power BI.
-________________________________________
-PROFESSIONAL EXPERIENCE
-Accenture Solutions Pvt Ltd | SharePoint Developer & Data Scientist (Apr 2015 – Present)
-	Designed and developed data-driven solutions for business processes using Power BI, Power Automate, and SharePoint.
-	Built and maintained analytical dashboards and reports in Power BI to provide key insights to business stakeholders.
-	Developed and integrated React & SPFx-based applications, optimizing user experience.
-Packt Publishing Pvt Ltd | Website Administrator (Dec 2011 – Apr 2015)
-	Utilized SQL and web analytics tools to manage website content and optimize digital performance based on user data.
-	Analysed web traffic trends and optimized digital content based on data insights.
-Amway International (Through Team lease) & Wipro Ltd as Back Office Executive (2008 – 2011)
-	Managed large-scale data extraction, insurance claims processing, and validation workflows.
-________________________________________Education
-	Master of Computer Applications (MCA), Annamalai University | 2013 | 77%
-	Bachelor of Computer Applications (BCA), Annamalai University | 2011 | 72%
+Name: Abhaya Prasad Sahu
+Role: Data Science Specialist & SharePoint Developer
+Company: Accenture
+Location: Mumbai, India
+Website: https://halfdigit.com
+
+Summary:
+Abhaya is fullstack AI developer with over 17 years of experience transitioning into AI Engineering. He currently works at Accenture, as a data science specialist specializing in Data Science. He is passionate about building intelligent systems using Large Language Models (LLMs), RAG architectures, and modern web frameworks like Next.js.
+
+Core Competencies:
+- AI & Machine Learning (RAG, OpenAI API, LangChain)
+- Full Stack Development (React, Next.js, Flask, Python, javascript, HTML, CSS, SPFx, Azure AI, sharepoint developement)
+- Enterprise Solutions (SharePoint, Power Automate, power apps, power bi, git)
+- Data Analysis (Python, Pandas, SQL, scikit learn, tensorflow, power bi)
+
+Contact Information:
+- Email: sahuabhayaa333@gmail.com
+- LinkedIn: https://www.linkedin.com/in/abhaya-sahu/
+- GitHub: https://github.com/abhayas
+
+Personal Interests:
+Abhaya enjoys learning new technologies, experimenting with AI models, He is a continuous learner who spends his weekends upskilling on Udemy and building personal projects. his key projects are there in his porfolio site halfdigit.com
