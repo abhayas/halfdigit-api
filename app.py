@@ -204,10 +204,10 @@ def chat_about_me():
         # Ensure your table has a 'source' column, or remove it from query if not
         cur.execute(
             """
-            INSERT INTO chat_logs (user_question, ai_response, source) 
-            VALUES (%s, %s, %s)
+            INSERT INTO chat_logs (user_question, ai_response) 
+            VALUES (%s, %s)
             """,
-            (user_query, response, source)
+            (user_query, response)
         )
         conn.commit()
         cur.close()
