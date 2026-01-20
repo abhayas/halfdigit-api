@@ -26,90 +26,91 @@ Key Features:
 - Hybrid Hosting: Combines the speed of Vercel Edge Network (Frontend) with the computational power of Render (Python Backend).
 
 ---
+All Projects :
 
-PROJECT 1: Titanic Survival Prediction Engine
-Status: Live / Active
-Role: Machine Learning Engineer
-Implementation URL : https://www.halfdigit.com/titanic
-backend code : https://github.com/abhayas/halfdigit-api/blob/main/app.py#L46
-front end code : https://github.com/abhayas/halfdigit-web/blob/main/app/titanic/page.jsx
+   PROJECT 1: Titanic Survival Prediction Engine
+   Status: Live / Active
+   Role: Machine Learning Engineer
+   Implementation URL : https://www.halfdigit.com/titanic
+   backend code : https://github.com/abhayas/halfdigit-api/blob/main/app.py#L46
+   front end code : https://github.com/abhayas/halfdigit-web/blob/main/app/titanic/page.jsx
 
-github code titanic notebeook in github : https://github.com/abhayas/DataScience/blob/main/Titanic/Titanic.ipynb
-
-
-Tech Stack: Python, Scikit-learn, Flask, REST API, Pandas, Joblib.
-
-Description:
-A production-grade classification system that predicts passenger survival rates on the RMS Titanic based on historical data features such as age, gender, and travel class.
-
-Key Features:
-- Real-time Inference: Delivers instant predictions via a RESTful API.
-- Serverless Architecture: Handles cold-starts efficiently on cloud platforms (Render).
-- Probability Scoring: Returns both a binary classification (Survived/Died) and a confidence probability score.
-- Data Logging: Implements request logging for telemetry and model monitoring.
-
-How it Works:
-User inputs (Passenger Class, Age, Sex, Family Count) are sent to a Flask backend where a pre-trained Random Forest Classifier processes the data and returns the prediction JSON.
-
----
-
-PROJECT 2: Audio Extraction Pipeline (Speech-to-Text)
-Status: Live / Active
-Role: AI Integration Specialist
-URL : https://www.halfdigit.com/speech-to-text
-front end code : https://github.com/abhayas/halfdigit-web/blob/main/app/speech-to-text/page.jsx
-backend code : https://github.com/abhayas/halfdigit-api/blob/main/app.py
-
-Tech Stack: OpenAI Whisper (Large-v3), Hugging Face Inference API, Python, Flask, Next.js.
-
-Description:
-An automated pipeline designed to convert unstructured audio data into structured text. It bridges a Next.js frontend with high-performance inference clusters to provide accurate transcriptions.
-
-Key Features:
-- High-Fidelity Transcription: Leverages the Whisper Large-v3 model for near-human accuracy.
-- Multi-Format Support: Ingests and processes both .wav and .mp3 audio files.
-- Secure API Gateway: Uses environment-secured tokens to communicate with Hugging Face infrastructure.
-
----
-
-PROJECT 3: Portfolio AI Assistant (RAG Chatbot)
-Status: Live / Active
-URL : halfdigit.com
-front end code : https://github.com/abhayas/halfdigit-web/blob/main/app/components/ChatBot.jsx
-backend code : https://github.com/abhayas/halfdigit-api/blob/main/rag.py
-
-Role: AI Engineer & Full Stack Developer
-Tech Stack: Python, Flask, LangChain, OpenAI GPT-4o-mini, FAISS, React.js, Tailwind CSS.
-
-Description:
-A custom conversational AI agent embedded directly into the HalfDigit.com site. This bot acts as an interactive resume, using Retrieval-Augmented Generation (RAG) to answer specific questions about Abhaya's background, reducing hallucinations by grounding responses in factual text data.
-
-Technical Architecture:
-1. RAG Pipeline: Uses LangChain to orchestrate retrieval. The knowledge base consists of structured text files (Resume, Projects, Profile) indexed for semantic search.
-2. Vector Database: Integrated FAISS (Facebook AI Similarity Search) for low-latency, efficient document retrieval without external database dependency.
-3. Backend Logic: Built on Flask, utilizing OpenAI's 'gpt-4o-mini' for generation and 'text-embedding-3-small' for creating embeddings.
-4. Frontend UI: A custom React.js floating widget with auto-scrolling, "typing" indicators, and responsive design.
-
-Key Achievements:
-- "Meta-Awareness": The bot understands its own architecture and can explain how it was built.
-- Cost Optimization: Designed to run efficiently on free-tier infrastructure using local vector storage and mini-model variants.
+   github code titanic notebeook in github : https://github.com/abhayas/DataScience/blob/main/Titanic/Titanic.ipynb
 
 
----
+   Tech Stack: Python, Scikit-learn, Flask, REST API, Pandas, Joblib.
 
-PROJECT 4: Deep Learning Risk Assessor
-Status: In Development (Building)
-Role: Deep Learning Engineer
-Tech Stack: TensorFlow, Keras, Python, Docker.
+   Description:
+   A production-grade classification system that predicts passenger survival rates on the RMS Titanic based on historical data features such as age, gender, and travel class.
 
-Description:
-A Neural Network designed for financial risk assessment, specifically for loan eligibility prediction. Currently optimizing model weights for containerized deployment.
+   Key Features:
+   - Real-time Inference: Delivers instant predictions via a RESTful API.
+   - Serverless Architecture: Handles cold-starts efficiently on cloud platforms (Render).
+   - Probability Scoring: Returns both a binary classification (Survived/Died) and a confidence probability score.
+   - Data Logging: Implements request logging for telemetry and model monitoring.
 
----
+   How it Works:
+   User inputs (Passenger Class, Age, Sex, Family Count) are sent to a Flask backend where a pre-trained Random Forest Classifier processes the data and returns the prediction JSON.
 
-PROJECT 5: Enterprise Document Chat
-Status: In Development (Building)
-Tech Stack: OpenAI, LangChain, Vector Database (Pinecone/Chroma).
+   ---
 
-Description:
-A planned RAG system that allows secure Q&A against user-uploaded PDF documentation, simulating an enterprise search environment.
+   PROJECT 2: Audio Extraction Pipeline (Speech-to-Text)
+   Status: Live / Active
+   Role: AI Integration Specialist
+   URL : https://www.halfdigit.com/speech-to-text
+   front end code : https://github.com/abhayas/halfdigit-web/blob/main/app/speech-to-text/page.jsx
+   backend code : https://github.com/abhayas/halfdigit-api/blob/main/app.py
+
+   Tech Stack: OpenAI Whisper (Large-v3), Hugging Face Inference API, Python, Flask, Next.js.
+
+   Description:
+   An automated pipeline designed to convert unstructured audio data into structured text. It bridges a Next.js frontend with high-performance inference clusters to provide accurate transcriptions.
+
+   Key Features:
+   - High-Fidelity Transcription: Leverages the Whisper Large-v3 model for near-human accuracy.
+   - Multi-Format Support: Ingests and processes both .wav and .mp3 audio files.
+   - Secure API Gateway: Uses environment-secured tokens to communicate with Hugging Face infrastructure.
+
+   ---
+
+   PROJECT 3: Portfolio AI Assistant (RAG Chatbot)
+   Status: Live / Active
+   URL : halfdigit.com
+   front end code : https://github.com/abhayas/halfdigit-web/blob/main/app/components/ChatBot.jsx
+   backend code : https://github.com/abhayas/halfdigit-api/blob/main/rag.py
+
+   Role: AI Engineer & Full Stack Developer
+   Tech Stack: Python, Flask, LangChain, OpenAI GPT-4o-mini, FAISS, React.js, Tailwind CSS.
+
+   Description:
+   A custom conversational AI agent embedded directly into the HalfDigit.com site. This bot acts as an interactive resume, using Retrieval-Augmented Generation (RAG) to answer specific questions about Abhaya's background, reducing hallucinations by grounding responses in factual text data.
+
+   Technical Architecture:
+   1. RAG Pipeline: Uses LangChain to orchestrate retrieval. The knowledge base consists of structured text files (Resume, Projects, Profile) indexed for semantic search.
+   2. Vector Database: Integrated FAISS (Facebook AI Similarity Search) for low-latency, efficient document retrieval without external database dependency.
+   3. Backend Logic: Built on Flask, utilizing OpenAI's 'gpt-4o-mini' for generation and 'text-embedding-3-small' for creating embeddings.
+   4. Frontend UI: A custom React.js floating widget with auto-scrolling, "typing" indicators, and responsive design.
+
+   Key Achievements:
+   - "Meta-Awareness": The bot understands its own architecture and can explain how it was built.
+   - Cost Optimization: Designed to run efficiently on free-tier infrastructure using local vector storage and mini-model variants.
+
+
+   ---
+
+   PROJECT 4: Deep Learning Risk Assessor
+   Status: In Development (Building)
+   Role: Deep Learning Engineer
+   Tech Stack: TensorFlow, Keras, Python, Docker.
+
+   Description:
+   A Neural Network designed for financial risk assessment, specifically for loan eligibility prediction. Currently optimizing model weights for containerized deployment.
+
+   ---
+
+   PROJECT 5: Enterprise Document Chat
+   Status: In Development (Building)
+   Tech Stack: OpenAI, LangChain, Vector Database (Pinecone/Chroma).
+
+   Description:
+   A planned RAG system that allows secure Q&A against user-uploaded PDF documentation, simulating an enterprise search environment.

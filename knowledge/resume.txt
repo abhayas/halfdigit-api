@@ -10,26 +10,26 @@ Abhaya is a results-oriented AI Engineer & Data Scientist with over 17+ years of
 
 WORK EXPERIENCE:
 
-1. Accenture Solutions Pvt Ltd (SharePoint Developer & Data Scientist)
+1. Accenture Solutions Pvt Ltd (SharePoint Developer & Data Scientist) ( fourth and current company )
    Dates: Apr 2015 – Present
    - Performs advanced data analysis on Salesforce MMS and Workbench datasets, developing XGBoost models to predict business outcomes and generate strategic insights.
    - Develops data-driven solutions for business processes using Power BI, Power Automate, and SharePoint.
    - Builds and maintains analytical dashboards and reports in Power BI to provide key insights to stakeholders.
    - Develops and integrates React & SPFx-based applications to optimize user experience.
 
-2. Packt Publishing Pvt Ltd (Website Administrator)
+2. Packt Publishing Pvt Ltd (Website Administrator) ( Third company)
    Dates: Dec 2011 – Apr 2015
    - Managed website content and optimized digital performance.
    - Analyzed large-scale web traffic trends using SQL and web analytics tools.
    - Performed website administration and maintenance tasks.
 
-3. Amway International (via TeamLease) (ID Card Officer - Back Office)
+3. Amway International (via TeamLease) (ID Card Officer - Back Office) ( second Company)
    Dates: Dec 2010 – Apr 2011
    - Managed data extraction via AS-400 systems.
    - Coordinated vendor logistics for ID card processing.
    - Generated financial MIS reports ensuring Standard Operating Procedure (SOP) compliance.
 
-4. Wipro Ltd & Citigroup Global Services (Back Office Executive)
+4. Wipro Ltd & Citigroup Global Services (Back Office Executive) ( First company)
    Dates: Aug 2007 – Jan 2010
    - Processed United Health Group insurance claims on AS-400 systems.
    - Managed high-volume Citibank digital cheque clearance operations.

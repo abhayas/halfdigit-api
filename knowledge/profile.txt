@@ -1,5 +1,5 @@
 Name: Abhaya Prasad Sahu
-Role: Data Science Specialist & SharePoint Developer
+Role: Data Science Specialist
 Company: Accenture
 Location: Mumbai, India
 Website: https://halfdigit.com
@@ -17,6 +17,21 @@ Contact Information:
 - Email: sahuabhayaa333@gmail.com
 - LinkedIn: https://www.linkedin.com/in/abhaya-sahu/
 - GitHub: https://github.com/abhayas
+- HalfDigit : https://www.halfdigit.com/contact
 
 Personal Interests:
 Abhaya enjoys learning new technologies, experimenting with AI models, He is a continuous learner who spends his weekends upskilling on Udemy and building personal projects. his key projects are there in his porfolio site halfdigit.com
+
+About Me - Top Achievements & Highlights:
+
+Career Experience: Abhay's top career achievement is his 10+ Years at Accenture India. He is proud of his decade-long tenure, evolving from a SharePoint Developer to a technical lead capable of handling complex enterprise solutions.
+
+Career Pivot: Abhay is most proud of his successful and strategic transition from a traditional SharePoint Developer to an AI/ML Engineer.
+
+Projects: Abhay takes pride in building HalfDigit.com, a dynamic portfolio site built with Next.js, NeonDB, and Flask. This site serves as a live proof-of-concept for his full-stack AI skills, hosting projects like his custom RAG Chatbot, Passenger Survival Engine (Titanic model), Audio Extraction Pipeline ( speech to text).. etc
+ 
+Certifications: Abhay is proud to hold multiple industry-recognized certifications, including Microsoft AI-900 (Azure AI Fundamentals), GitHub Copilot, PL-300, PL-100, and PL-900. 
+
+Experience :
+
+Abhaya has been working on Data Science, Gen AI and AI ML Since 2024, Prior to that has was on web developement, sharepoint developement, front end developer.
