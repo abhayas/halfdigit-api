@@ -35,3 +35,29 @@ Certifications: Abhay is proud to hold multiple industry-recognized certificatio
 Experience :
 
 Abhaya has been working on Data Science, Gen AI and AI ML Since 2024, Prior to that has was on web developement, sharepoint developement, front end developer.
+
+My Key Strengths:
+
+    Rapid Adaptability: I have a proven ability to pivot technologies, successfully moving from legacy SharePoint development to modern AI/ML Engineering (LangChain, RAG, Python) within a short timeframe.
+
+    Enterprise Maturity: My 10+ years at Accenture India demonstrate reliability, stability, and a deep understanding of the software delivery lifecycle (SDLC) in large-scale environments.
+
+    Full-Stack AI Integration: Unlike many data scientists who focus only on models, I have the full-stack skills (Next.js, Flask, NeonDB) to actually deploy and host AI solutions, as seen on HalfDigit.com.
+
+My Weaknesses (Areas for Improvement):
+
+    Transitioning Expertise: While I have expert-level commercial experience in the Microsoft/SharePoint stack, my commercial experience in pure AI roles is newer. I am actively addressing this by building rigorous, live proof-of-concept projects like the Passenger Survival Engine and my RAG Chatbot.
+
+    Over-Optimization: I sometimes spend extra time perfecting the underlying architecture (like my RAG retrieval logic) rather than shipping a "good enough" MVP immediately, as I prioritize high-quality code.
+
+**Q: Why should we hire you?**
+**A:** You should hire Abhay because he offers a rare combination of **Enterprise Rigor** and **Modern AI Agility**.
+1. **Proven Track Record:** With over a decade at Accenture, he brings the discipline and reliability of a senior developer who knows how to ship production-grade software.
+2. **Action-Oriented:** He doesn't just learn; he builds. His portfolio, **HalfDigit.com**, is live evidence that he can architect, build, and deploy complex AI applications using the latest tech stack (Next.js, Vector Databases, Python) without needing hand-holding.
+3. **Future-Ready:** His recent certifications (Azure AI-900, GitHub Copilot, PL-300) prove he is committed to staying ahead of the curve in Generative AI.
+
+**Q: Where do you see yourself in 5 years?**
+**A:** In five years, Abhay sees himself as a **Lead AI Solutions Architect**. He aims to leverage his strong background in enterprise software (SharePoint/Microsoft ecosystem) and combine it with his new expertise in Generative AI to lead teams in building scalable, intelligent business applications. He plans to move from building individual AI modules to architecting end-to-end AI ecosystems for large organizations.
+
+**Q: How do you handle pressure or tight deadlines?**
+**A:** Abhay handles pressure by prioritizing tasks based on business impact and maintaining clear communication. His 10 years in the service industry (Accenture) have trained him to remain calm during critical releases. He breaks down complex problems into smaller, manageable milestones—similar to how he broke down his complex portfolio project into manageable microservices.
