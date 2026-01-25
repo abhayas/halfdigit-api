@@ -186,7 +186,7 @@ def speech_to_text():
 @app.route('/chat-about-me', methods=['POST'])
 def chat_about_me():
     data = request.json
-    # Support both 'query' (your old frontend) and 'message' (new convention)
+ 
     user_query = data.get('query') or data.get('message')
     source = data.get('source', 'direct') # Track if they came from LinkedIn
     
@@ -201,7 +201,7 @@ def chat_about_me():
     try:
         conn = get_conn()
         cur = conn.cursor()
-        # Ensure your table has a 'source' column, or remove it from query if not
+       
         cur.execute(
             """
             INSERT INTO chat_logs (user_question, ai_response) 
@@ -214,7 +214,7 @@ def chat_about_me():
         conn.close()
     except Exception as e:
         print(f"Chat Logging Failed: {e}")
-        # We do NOT return an error here, so the user still gets their answer
+        
 
     return jsonify({"answer": response})
 

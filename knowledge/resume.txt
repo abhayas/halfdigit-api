@@ -3,88 +3,80 @@ CONTACT INFORMATION:
 - Email: sahuabhayaa333@gmail.com
 - Phone: +91 9768828350
 - Portfolio: https://halfdigit.com
+- LinkedIn: https://www.linkedin.com/in/abhaya-sahu/
+- GitHub: https://github.com/abhayas
+- Contact Form : https://www.halfdigit.com/contact
 - Location: Mumbai, India
-
 PROFESSIONAL SUMMARY:
-Abhaya is a results-oriented AI Engineer & Data Scientist with over 15+ years of experience in IT, transforming complex business requirements into scalable data solutions. He bridges the gap between enterprise data systems and modern AI, leveraging Python, Machine Learning, and Power BI. Currently, he is focused on transitioning fully into AI Engineering roles, having created "HalfDigit.com," a live full-stack AI portfolio showcasing end-to-end model deployment.
+   Abhaya is a results-oriented AI Engineer & Data Scientist with over 15+ years of experience in IT, transforming complex business requirements into scalable data solutions. He bridges the gap between enterprise data systems and modern AI, leveraging Python, Machine Learning, and Power BI. Currently, he is focused on transitioning fully into AI Engineering roles, having created "HalfDigit.com," a live full-stack AI portfolio showcasing end-to-end model deployment.
 
 WORK EXPERIENCE:
-
-1. Accenture Solutions Pvt Ltd (SharePoint Developer & Data Scientist) ( Third and current company )
-   Dates: From Apr 2015 to Present
-   - Performs advanced data analysis on Salesforce MMS and Workbench datasets, developing XGBoost models to predict business outcomes and generate strategic insights.
-   - Develops data-driven solutions for business processes using Power BI, Power Automate, and SharePoint.
-   - Builds and maintains analytical dashboards and reports in Power BI to provide key insights to stakeholders.
-   - Develops and integrates React & SPFx-based applications to optimize user experience.
-
-2. Packt Publishing Pvt Ltd (Website Administrator) ( Second company)
-   Dates: From Dec 2011 to Apr 2015
-   - Managed website content and optimized digital performance.
-   - Analyzed large-scale web traffic trends using SQL and web analytics tools.
-   - Performed website administration and maintenance tasks.
-
-3. Amway International (via TeamLease) (ID Card Officer - Back Office) ( First Company)
-   Dates: From June 2010 to June 2011
-   - Managed data extraction via AS-400 systems.
-   - Coordinated vendor logistics for ID card data processing.
-   - Generated financial MIS reports ensuring Standard Operating Procedure (SOP) compliance.
+   1. Amway International (via TeamLease paroll) as ID Card Officer ( First Company)
+      Dates: From 23 June 2010 to 30 June 2011
+      - Managed data extraction via AS-400 systems.
+      - Coordinated vendor logistics for ID card data processing.
+      - Generated financial MIS reports ensuring Standard Operating Procedure (SOP) compliance.
+   2. Packt Publishing Pvt Ltd as Website Administrator ( Second company)
+      Dates: From 2 Dec 2011 to 21 Apr 2015
+      - Managed website content and optimized digital performance.
+      - Analyzed large-scale web traffic trends using SQL and web analytics tools.
+      - Performed website administration and maintenance tasks.
+   3. Accenture Solutions Pvt Ltd as Data Scientis specialist ( Third and current company )
+      Dates: From 24 Apr 2015 to Present
+      - Performs advanced data analysis on Salesforce MMS and Workbench datasets, developing XGBoost models to predict business outcomes and generate strategic insights.
+      - Develops data-driven solutions for business processes using Power BI, Power Automate, and SharePoint.
+      - Builds and maintains analytical dashboards and reports in Power BI to provide key insights to stakeholders.
+      - Develops and integrates React & SPFx-based applications to optimize user experience.
 
 TECHNICAL SKILLS:
-- AI & Machine Learning: Python, Scikit-learn, NLP, Random Forest, Regression, Clustering, Generative AI, Neural Networks, RAG pipelines, Hugging Face.
-- Data Engineering: SQL, Pandas, NumPy, Power BI (DAX), Azure AI, Matplotlib, Seaborn.
-- Web & Deployment: React.js, Next.js, JavaScript, Flask/Fast API, Vercel Edge Runtime, Render Serverless, Neon Postgres.
-- Enterprise Tools: SharePoint Framework (SPFx), Power Automate, Power Platform, Salesforce.
+   - AI & Machine Learning: Python, Scikit-learn, NLP, Random Forest, Regression, Clustering, Generative AI, Neural Networks, RAG pipelines, Hugging Face.
+   - Data Engineering: SQL, Pandas, NumPy, Power BI (DAX), Azure AI, Matplotlib, Seaborn.
+   - Web & Deployment: React.js, Next.js, JavaScript, Flask/Fast API, Vercel Edge Runtime, Render Serverless, Neon Postgres.
+   - Enterprise Tools: SharePoint Framework (SPFx), Power Automate, Power Platform, Salesforce.
 
 KEY PROJECTS (Live at HalfDigit.com):
-1. Portfolio AI Assistant (RAG Chatbot):
-   - Built a RAG agent using LangChain and FAISS to answer professional queries.
-   - Strictly grounds LLM responses in factual resume data to eliminate hallucinations.
+   1. Portfolio AI Assistant (RAG Chatbot):
+      - Built a RAG agent using LangChain and FAISS to answer professional queries.
+      - Strictly grounds LLM responses in factual resume data to eliminate hallucinations.
 
-2. Audio Extraction Pipeline:
-   - Developed an automated speech-to-text pipeline integrating OpenAI's Whisper Large-v3 model via Hugging Face.
-   - Transcribes audio files with high fidelity using a Next.js frontend and Flask backend.
+   2. Audio Extraction Pipeline:
+      - Developed an automated speech-to-text pipeline integrating OpenAI's Whisper Large-v3 model via Hugging Face.
+      - Transcribes audio files with high fidelity using a Next.js frontend and Flask backend.
 
-3. Titanic Survival Prediction Engine:
-   - Deployed a production-grade Random Forest API on Render.
-   - Provides real-time survival probability scores with optimized serverless performance.
+   3. Titanic Survival Prediction Engine:
+      - Deployed a production-grade Random Forest API on Render.
+      - Provides real-time survival probability scores with optimized serverless performance.
 
-4. HalfDigit.com (Portfolio Platform):
-   - Architected a hybrid full-stack application (Next.js + Flask).
-   - utilized Neon Serverless Postgres for custom telemetry tracking and model hosting.
+   4. HalfDigit.com (Portfolio Platform):
+      - Architected a hybrid full-stack application (Next.js + Flask).
+      - utilized Neon Serverless Postgres for custom telemetry tracking and model hosting.
 
 EDUCATION:
-- Master of Computer Applications (MCA), Annamalai University (2013) - 77%
-- Bachelor of Computer Applications (BCA), Annamalai University (2011) - 72%
+   - Master of Computer Applications (M.C.A), Annamalai University (2013) - 77%
+   - Bachelor of Computer Applications (B.C.A), Annamalai University (2011) - 72%
 
 CERTIFICATIONS:
-
-- Microsoft Certified: AI Fundamentals (AI-900)
-  Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/1AA3FD8C3E0EFA3C?sharingId
-  - Validated foundational knowledge of Machine Learning, Computer Vision, and Natural Language Processing (NLP) workloads within the Azure ecosystem.
-
-- Microsoft Certified: Power BI Data Analyst Associate (PL-300)
-  Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/728C0783EF562446?sharingId=55C01124773C65B1
-  - Demonstrated expertise in data modeling, advanced DAX calculations, and transforming raw data into actionable insights using Power Query and interactive dashboards.
-
-- Microsoft Certified: Power Platform App Maker Associate (PL-100)
-  Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/469A2B64E5D7439C?sharingId
-  - Certified in designing and building custom low-code business applications and automating workflows to enhance organizational productivity using the Power Platform.
-
-- Microsoft Certified: Power Platform Fundamentals (PL-900)
-  Link: https://learn.microsoft.com/api/credentials/share/en-gb/AbhayaPrasadSahu-3680/3AE2D27B78D2F962?sharingId
-  - Validated core understanding of the Power Platform stack (Power Apps, Power Automate, Dataverse) for optimizing business processes and data connectivity.
-
-- GitHub Copilot Certification
-  Link: https://www.credly.com/badges/1412810a-1314-4c79-9137-9cdb41cb0fd6/public_url
-  - Validated proficiency in AI-driven software development, focusing on prompt engineering, code optimization, and privacy-aware context management.
-
-- Data Science and Machine Learning Bootcamp (Udemy)
-  Link: https://www.udemy.com/certificate/UC-59547dec-ac07-4dc0-a06a-b78c4cb75f94/
-  - Comprehensive training in Python for Data Science, covering NumPy, Pandas, and Scikit-Learn (Linear Regression, K-Means Clustering, Random Forests, and Neural Networks).
-
-- SQL & Python Bootcamp (Udemy)
-  Link: http://ude.my/UC-5e89fbf1-d862-4d04-b3ef-8298ba89aa5f
-  - Mastered advanced SQL querying techniques including Joins, Aggregate Functions, and complex data manipulation using PostgreSQL.
-- Reinvention with Agentic AI ( Accenture )
-   Link : https://www.credly.com/badges/c06b85d6-0d6c-4439-b7ad-0a9e39c9f534/linked_in_profile
-   - Accenture (Demonstrated expertise in applying agentic AI to real-world challenges)
+   1.  Microsoft Certified: AI Fundamentals (AI-900)
+      Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/1AA3FD8C3E0EFA3C?sharingId
+      Description: Validated foundational knowledge of Machine Learning, Computer Vision, and Natural Language Processing (NLP) workloads within the Azure ecosystem.
+   2. Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+      Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/728C0783EF562446?sharingId=55C01124773C65B1
+      Description: Demonstrated expertise in data modeling, advanced DAX calculations, and transforming raw data into actionable insights using Power Query and interactive dashboards.
+   3. Microsoft Certified: Power Platform App Maker Associate (PL-100)
+      Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/469A2B64E5D7439C?sharingId
+      Description: Certified in designing and building custom low-code business applications and automating workflows to enhance organizational productivity using the Power Platform.
+   4.  Microsoft Certified: Power Platform Fundamentals (PL-900)
+      Link: https://learn.microsoft.com/api/credentials/share/en-gb/AbhayaPrasadSahu-3680/3AE2D27B78D2F962?sharingId
+      Description: Validated core understanding of the Power Platform stack (Power Apps, Power Automate, Dataverse) for optimizing business processes and data connectivity.
+   5.  GitHub Copilot Certification
+      Link: https://www.credly.com/badges/1412810a-1314-4c79-9137-9cdb41cb0fd6/public_url
+      Description: Validated proficiency in AI-driven software development, focusing on prompt engineering, code optimization, and privacy-aware context management.
+   6.  Data Science and Machine Learning Bootcamp (Udemy)
+      Link: https://www.udemy.com/certificate/UC-59547dec-ac07-4dc0-a06a-b78c4cb75f94/
+      Description: Comprehensive training in Python for Data Science, covering NumPy, Pandas, and Scikit-Learn (Linear Regression, K-Means Clustering, Random Forests, and Neural Networks).
+   7.  SQL & Python Bootcamp (Udemy)
+      Link: http://ude.my/UC-5e89fbf1-d862-4d04-b3ef-8298ba89aa5f
+      Description: Mastered advanced SQL querying techniques including Joins, Aggregate Functions, and complex data manipulation using PostgreSQL.
+   8. Reinvention with Agentic AI ( Accenture )
+      Link : https://www.credly.com/badges/c06b85d6-0d6c-4439-b7ad-0a9e39c9f534/linked_in_profile
+      Description: Accenture (Demonstrated expertise in applying agentic AI to real-world challenges)

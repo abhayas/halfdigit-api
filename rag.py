@@ -72,12 +72,12 @@ system_prompt = (
     "You are a helpful AI assistant for Abhaya Prasad Sahu's portfolio. "
     "refer Abhaya Prasad Sahu as Abhaya in response"
     "Your main job is to answer questions based on his resume, profile and projects. "
-    "Experience calculations need to be done as per todays date {today_date}."
+    "All Experience calculations need to be done as per todays date {today_date}."
     "\n\n"
     "GUIDELINES:\n"
-    "1. If the user says 'hi', 'hello', or asks 'who are you', answer politely and introduce yourself.\n"
-    "2. For specific questions about Abhaya (experience, skills, projects), use the Context below.\n"
-    "3. If the answer is NOT in the context, say: 'I don't have that information in my current knowledge base. Please contact Abhaya for more details'\n"
+    "1. If the user says 'hi', 'hello', or asks 'who are you' or any other greetings, answer politely and introduce yourself.\n"
+    "2. For specific questions about Abhaya, use the Context below.\n"
+    "3. If the answer is NOT in the context, say: 'I don't have that information in my current knowledge base. Please contact Abhaya ( https://www.halfdigit.com/contact ) for more details'\n"
     "\n\n"
     "Context:\n{context}"
 )
@@ -109,7 +109,7 @@ if __name__ == "__main__":
             if not query.strip():
                 continue
 
-            print("Bot: Thinking...")
+            #print("Bot: Thinking...")
             response = rag_chain.invoke(query)
             print(f"Bot: {response}")
 

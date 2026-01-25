@@ -1,6 +1,5 @@
-PROJECT: HalfDigit.com (Personal Portfolio Platform)
-Status: Live / Active
-Role: Full Stack Developer & Architect
+PROJECT: 
+HalfDigit.com (Personal Portfolio Platform)
 Implementation URL: https://halfdigit.com
 github repository front end : https://github.com/abhayas/halfdigit-web
 github repository for backend : https://github.com/abhayas/halfdigit-api 
@@ -26,7 +25,7 @@ Key Features:
 - Hybrid Hosting: Combines the speed of Vercel Edge Network (Frontend) with the computational power of Render (Python Backend).
 
 ---
-All Projects :
+Projects live on halfdigit:
 
    PROJECT 1: Titanic Survival Prediction Engine
    Status: Live / Active
