@@ -5,7 +5,7 @@ Location: Mumbai, India
 Website: https://halfdigit.com
 
 Summary:
-Abhaya is fullstack AI developer with over 15+ years of experience transitioning into AI Engineering. He currently works at Accenture, as a data science specialist specializing in Data Science. He is passionate about building intelligent systems using Large Language Models (LLMs), RAG architectures, and modern web frameworks like Next.js.
+Abhaya is fullstack AI developer with over 15+ years of experience transitioning into AI Engineering. He currently works at Accenture since April 2015, as a data science specialist specializing in Data Science. He is passionate about building intelligent systems using Large Language Models (LLMs), RAG architectures, and modern web frameworks like Next.js.
 
 Core Competencies:
 - AI & Machine Learning (RAG, OpenAI API, LangChain)
