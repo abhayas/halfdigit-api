@@ -21,7 +21,7 @@ WORK EXPERIENCE:
       - Managed website content and optimized digital performance.
       - Analyzed large-scale web traffic trends using SQL and web analytics tools.
       - Performed website administration and maintenance tasks.
-   3. Accenture Solutions Pvt Ltd as Data Scientis specialist ( Third and current company )
+   3. Accenture Solutions Pvt Ltd as Data Scientis specialist ( Third and present company )
       Dates: From 24 Apr 2015 to Present
       - Performs advanced data analysis on Salesforce MMS and Workbench datasets, developing XGBoost models to predict business outcomes and generate strategic insights.
       - Develops data-driven solutions for business processes using Power BI, Power Automate, and SharePoint.
@@ -56,27 +56,30 @@ EDUCATION:
    - Bachelor of Computer Applications (B.C.A), Annamalai University (2011) - 72%
 
 CERTIFICATIONS:
-   1.  Microsoft Certified: AI Fundamentals (AI-900)
+   1.  Microsoft Certified: AI Fundamentals (AI-900) Earned on February 24, 2025
       Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/1AA3FD8C3E0EFA3C?sharingId
       Description: Validated foundational knowledge of Machine Learning, Computer Vision, and Natural Language Processing (NLP) workloads within the Azure ecosystem.
-   2. Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+   2. Microsoft Certified: Power BI Data Analyst Associate (PL-300) Earned on: August 12, 2024 Expires on: August 13, 2026
       Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/728C0783EF562446?sharingId=55C01124773C65B1
       Description: Demonstrated expertise in data modeling, advanced DAX calculations, and transforming raw data into actionable insights using Power Query and interactive dashboards.
-   3. Microsoft Certified: Power Platform App Maker Associate (PL-100)
-      Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/469A2B64E5D7439C?sharingId
+   3. Microsoft Certified: Power Platform App Maker Associate (PL-100) Earned on: March 4, 2024 Expired on: March 5, 2025
+      Link: https://learn.microsoft.com/api/credentials/share/en-us/AbhayaPrasadSahu-3680/469A2B64E5D7439C?sharingId 
       Description: Certified in designing and building custom low-code business applications and automating workflows to enhance organizational productivity using the Power Platform.
-   4.  Microsoft Certified: Power Platform Fundamentals (PL-900)
+   4. Microsoft Certified: Power Platform Fundamentals (PL-900) Earned on: 23 May 2023
       Link: https://learn.microsoft.com/api/credentials/share/en-gb/AbhayaPrasadSahu-3680/3AE2D27B78D2F962?sharingId
       Description: Validated core understanding of the Power Platform stack (Power Apps, Power Automate, Dataverse) for optimizing business processes and data connectivity.
-   5.  GitHub Copilot Certification
+   5. GitHub Copilot Certification Earne on May 05, 2025 Expires on: May 05, 2028
       Link: https://www.credly.com/badges/1412810a-1314-4c79-9137-9cdb41cb0fd6/public_url
       Description: Validated proficiency in AI-driven software development, focusing on prompt engineering, code optimization, and privacy-aware context management.
-   6.  Data Science and Machine Learning Bootcamp (Udemy)
+   6. Data Science and Machine Learning Bootcamp (Udemy) Earned on September 7, 2025 
       Link: https://www.udemy.com/certificate/UC-59547dec-ac07-4dc0-a06a-b78c4cb75f94/
       Description: Comprehensive training in Python for Data Science, covering NumPy, Pandas, and Scikit-Learn (Linear Regression, K-Means Clustering, Random Forests, and Neural Networks).
-   7.  SQL & Python Bootcamp (Udemy)
+   7. The Complete SQL Bootcamp: Go from Zero Earned on August 25, 2024
       Link: http://ude.my/UC-5e89fbf1-d862-4d04-b3ef-8298ba89aa5f
       Description: Mastered advanced SQL querying techniques including Joins, Aggregate Functions, and complex data manipulation using PostgreSQL.
-   8. Reinvention with Agentic AI ( Accenture )
+   8. The Complete Python Bootcamp From Zero to Hero in Python (Udemy) Earned on June 04, 2024
+      Link : https://www.udemy.com/certificate/UC-bec8b9c4-3e5d-4a4f-b9f5-8945b627fc24/
+      Description : Mastered Python 3 fundamentals to advanced programming concepts, including OOP, file handling, automation, data processing, and real-world project development.
+   9. Reinvention with Agentic AI ( Accenture ) Earned on December 10, 2025
       Link : https://www.credly.com/badges/c06b85d6-0d6c-4439-b7ad-0a9e39c9f534/linked_in_profile
       Description: Accenture (Demonstrated expertise in applying agentic AI to real-world challenges)
