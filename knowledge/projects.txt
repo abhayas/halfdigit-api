@@ -113,3 +113,11 @@ Projects live on halfdigit:
 
    Description:
    A planned RAG system that allows secure Q&A against user-uploaded PDF documentation, simulating an enterprise search environment.
+
+   PROJECT 6: Salesforce Agentforce Win/Loss Copilot
+   Status: Completed (Sandbox Environment)
+   Tech Stack: Salesforce Agentforce, Data Cloud (Vector Search), Lightning Web Components (LWC), Apex, LLM.
+
+   Description:
+   A custom generative AI agent built to analyze enterprise sales performance. Engineered a Lightning Web Component (LWC) UI that interrupts the standard chat to dynamically collect structured filter criteria (Market, Industry). This data feeds an Apex backend that executes a hybrid vector search against Salesforce Data Cloud, ensuring the LLM's final summaries are highly relevant and grounded in factual sales data.
+   
