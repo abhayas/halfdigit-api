@@ -11,22 +11,32 @@ PROFESSIONAL SUMMARY:
    Abhaya is a results-oriented AI Engineer & Data Scientist with over 15+ years of experience in IT, transforming complex business requirements into scalable data solutions. He bridges the gap between enterprise data systems and modern AI, leveraging Python, Machine Learning, and Power BI. Currently, he is focused on transitioning fully into AI Engineering roles, having created "HalfDigit.com," a live full-stack AI portfolio showcasing end-to-end model deployment.
 
 WORK EXPERIENCE:
-   1. Amway International (via TeamLease paroll) as ID Card Officer ( First Company)
-      Dates: From 23 June 2010 to 30 June 2011
-      - Managed data extraction via AS-400 systems.
-      - Coordinated vendor logistics for ID card data processing.
-      - Generated financial MIS reports ensuring Standard Operating Procedure (SOP) compliance.
-   2. Packt Publishing Pvt Ltd as Website Administrator ( Second company)
-      Dates: From 2 Dec 2011 to 21 Apr 2015
-      - Managed website content and optimized digital performance.
-      - Analyzed large-scale web traffic trends using SQL and web analytics tools.
-      - Performed website administration and maintenance tasks.
-   3. Accenture Solutions Pvt Ltd as Data Scientis specialist ( Third and present company )
-      Dates: From 24 Apr 2015 to Present
-      - Performs advanced data analysis on Salesforce MMS and Workbench datasets, developing XGBoost models to predict business outcomes and generate strategic insights.
-      - Develops data-driven solutions for business processes using Power BI, Power Automate, and SharePoint.
-      - Builds and maintains analytical dashboards and reports in Power BI to provide key insights to stakeholders.
-      - Develops and integrates React & SPFx-based applications to optimize user experience.
+
+### Accenture Solutions Pvt Ltd
+**Role:** AI/ML Engineer, Data Science Specialist
+**Duration:** 24-Apr-15 to Present (11 years, 0 months, 7 days)
+* **Machine Learning Model Optimization:** Currently analysing the performance of deployed models within the Salesforce ecosystem. Conducting feature importance analysis on Salesforce MMS data to identify signal drift & engineer new features, improving model accuracy by 14%.
+* **Data Engineering & Analysis:** Engineered data pipelines to extract unstructured logs from Salesforce Workbench and MMS, reducing manual data processing time by 30%. Identifying key correlations in the unstructured data to refine inputs for model retraining and performance optimization.
+* **Agentic AI & Deal Intelligence:** Architected & deployed a production-grade AI-agent using Agentforce to query, analyze, and summarize historical win/loss data and competitor intelligence from Salesforce Data Cloud, accelerating deal intelligence reporting by 40%. Implemented strict deterministic UI-fallbacks to guarantee data integrity.
+* **AI Leadership & Capability Building:** Mentored cross-functional teams in designing and deploying custom generative AI agents within Salesforce Agentforce, accelerating enterprise AI adoption and establishing best practices for scalable, hallucination-free AI architectures.
+
+### Packt Publishing Private Limited
+**Role:** Website Admin
+**Duration:** 02-Dec-11 to 21-Apr-15 (3 years, 4 months, 19 days)
+* Managed website content and optimized digital performance by analysing large-scale web traffic trends using SQL and web analytics tools and performed website administration tasks.
+* Responsible for managing and installing upgrades for four different Intranets (WordPress, SugarCRM, Etc).
+
+### Amway International Private Limited (Through TeamLease)
+**Role:** ID card Officer (MIS executive)
+**Duration:** 23-Jun-10 to 30-Jun-11 (1 years, 0 months, 7 days)
+
+### Wipro BPO
+**Role:** Associate
+**Duration:** 17-Apr-08 to 07-Jan-10 (1 years, 8 months, 21 days)
+
+### Citigroup Private Limited (Now TCS)
+**Role:** Trainee
+**Duration:** 22-Aug-07 to 10-Apr-08 (0 years, 7 months, 19 days)
 
 TECHNICAL SKILLS:
    - AI & Machine Learning: Python, Scikit-learn, NLP, Random Forest, Regression, Clustering, Generative AI, Neural Networks, RAG pipelines, Hugging Face.
@@ -35,9 +45,11 @@ TECHNICAL SKILLS:
    - Enterprise Tools: SharePoint Framework (SPFx), Power Automate, Power Platform, Salesforce.
 
 KEY PROJECTS (Live at HalfDigit.com):
-   1. Portfolio AI Assistant (RAG Chatbot):
-      - Built a RAG agent using LangChain and FAISS to answer professional queries.
-      - Strictly grounds LLM responses in factual resume data to eliminate hallucinations.
+   1.  ### HalfDigit.com - Agentic AI Assistant (Personal Portfolio)
+   * **URL:** https://www.halfDigit.com
+   * Built full-stack AI system using Next.js + Flask with LangChain, FAISS and Vector Database.
+   * Implemented RAG pipeline to ensure factual AI responses.
+   * Deployed production-ready portfolio system.
 
    2. Audio Extraction Pipeline:
       - Developed an automated speech-to-text pipeline integrating OpenAI's Whisper Large-v3 model via Hugging Face.
@@ -50,6 +62,21 @@ KEY PROJECTS (Live at HalfDigit.com):
    4. HalfDigit.com (Portfolio Platform):
       - Architected a hybrid full-stack application (Next.js + Flask).
       - utilized Neon Serverless Postgres for custom telemetry tracking and model hosting.
+   5.   ### NLP & Competitor Analysis
+   * Engineered a Natural Language Processing (NLP) pipeline to extract and classify competitor strengths and weaknesses from unstructured text.
+   * Conducted text mining and correlation analysis to identify how specific competitor features impact final business/deal outcomes.
+
+   6.### Salesforce Agentforce Agent (Win/Loss Insight Coach)
+   * **Architected a Hybrid RAG Agentic Workflow:** Designed and deployed a conversational AI agent capable of dynamically routing user intent between a quantitative SQL math engine and a qualitative Data Cloud Vector Search engine.
+   * **Bridged Custom UI with LLM Context Windows:** Configured Custom Lightning Types to create a bidirectional data bridge, allowing the AI to pause processing, render a custom UI, and securely absorb user-defined parameters back into its reasoning engine.
+
+  
+
+   ### Audio Extraction Pipeline
+   * **URL:** https://www.halfdigit.com/speech-to-text
+   * Developed speech-to-text pipeline using Whisper Large-v3 (Hugging Face).
+   * Enabled high-accuracy transcription for NLP workflows.
+   * Deployed to halfdigit for inferencing.
 
 EDUCATION / QUALIFICATION :
    - Master of Computer Applications (M.C.A), Annamalai University (2013) - 77%
