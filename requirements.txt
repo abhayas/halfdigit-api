@@ -16,5 +16,6 @@ langchain-community
 langchain-core
 langchain-anthropic
 langchain-huggingface
+sentence-transformers
 faiss-cpu
 langchain_text_splitters
