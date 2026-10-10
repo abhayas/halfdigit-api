@@ -10,7 +10,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # Vector Store & AI
 from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_anthropic import ChatAnthropic
+from langchain_huggingface import HuggingFaceEmbeddings
 
 # Core Components (LCEL)
 from langchain_core.prompts import ChatPromptTemplate
@@ -19,10 +20,11 @@ from langchain_core.runnables import RunnablePassthrough
 from dotenv import load_dotenv
 
 # --- CONFIGURATION ---
-# Make sure your API key is set in your environment variables
-#os.environ["OPENAI_API_KEY"] = "sk-..." 
+# Make sure your Anthropic API key is set in your environment variables
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+if not ANTHROPIC_API_KEY:
+    raise ValueError("ANTHROPIC_API_KEY is not set in the environment or .env file.")
 
 print(f"LangChain Version: {langchain.__version__}")
 
@@ -59,7 +61,7 @@ print(f"Created {len(chunks)} knowledge chunks.")
 
 # --- 3. CREATE VECTOR STORE ---
 print("Creating vector database...")
-embedding = OpenAIEmbeddings(model="text-embedding-3-small")
+embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 vectorstore = FAISS.from_documents(chunks, embedding)
 retriever = vectorstore.as_retriever()
 
@@ -87,7 +89,7 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{input}"),
 ])
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = ChatAnthropic(model="claude-haiku-4-5", temperature=0)
 
 
 rag_chain = (
